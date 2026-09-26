@@ -5,7 +5,7 @@ package.domain = org.cyberapp
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,ttf
 version = 1.0
-requirements = python3,kivy,arabic-reshaper,python-bidi,urllib3,openssl,pyjnius,android
+requirements = python3,kivy==2.2.1,cython==0.29.36,arabic-reshaper,python-bidi,urllib3,openssl,pyjnius,android
 orientation = portrait
 fullscreen = 0
 android.permissions = INTERNET

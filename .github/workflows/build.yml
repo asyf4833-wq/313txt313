@@ -16,7 +16,7 @@ jobs:
           docker run --rm \
             -v "$PWD":/home/user/hostcwd \
             kivy/buildozer:latest \
-            android debug
+            bash -c 'export SDKMANAGER=$(find / -name "sdkmanager" -type f 2>/dev/null | head -1); echo "Found: $SDKMANAGER"; if [ -n "$SDKMANAGER" ]; then yes | $SDKMANAGER --licenses || true; fi; buildozer android debug'
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
